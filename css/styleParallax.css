@@ -1,0 +1,90 @@
+html {
+	scroll-behavior: smooth;
+}
+html,
+body{
+	height: 100%;
+}
+.SmoothScroll {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container {
+  width: 100vw;
+}
+section {
+	/* max-width: 1200px;
+	margin: 0 auto; */
+}
+#home { 
+	background: url(../images/p.jpg) 0 0 no-repeat fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100%;  
+	margin: 0 auto; 
+  width: 100%;
+	display:table;
+  position: relative;
+}
+#about { 
+	background: url(../images/p22.jpg) 0 0 no-repeat fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: #5c9900; 
+	height: 100%;
+	margin: 0 auto; 
+  width: 100%;
+	display:table; 
+  position: relative;
+}
+#ddd { 
+	background: url(../images/p21.jpg) 0 0 no-repeat fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	height: 100%;
+	margin: 0 auto; 
+  width: 100%;
+	display:table; 
+  position: relative;
+}
+#home article { 
+	height: 100vh; 
+	color: antiquewhite;
+	font-size: 32px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+#about article { 
+	background: url("../images/parallax.png") no-repeat scroll center top transparent; 
+	height: 458px; 
+	position: absolute;
+	top: 291px; 
+	width: 100%; 
+}
+.pText,
+.pText2 {
+	padding: 100px; position: 
+	relative; z-index: 2;
+}
+.pText {
+	background-color: #00B465;
+}
+.pText2 {
+	background-color: #65C9FD;
+}
+@media (max-width: 767.98px) {
+	.vaContainer {
+		padding: 0 28px;
+	}
+}
