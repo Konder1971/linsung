@@ -165,7 +165,7 @@ select {
 	}
 }
 body {
-	background-color: #f6f8fa;
+	background-color: #000;
 	font-family: 'Roboto', sans-serif;
 	color: #000;
 	font-weight: 400;
@@ -240,16 +240,11 @@ body {
 	text-align: center;
 }
 .video1 video {
-	max-height: 94vh;
-	max-width: 94vw;
+	max-height: 80vh;
+	max-width: 80vw;
 	width: auto;
 	cursor: pointer;
-	margin: 0 auto;
-}
-@media (max-width: 767.98px) {
-	body {
-		justify-content: center;
-	}
+	margin: 0 auto 20px;
 }
 
 @media (min-width: 768px) {
