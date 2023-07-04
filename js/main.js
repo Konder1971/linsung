@@ -26,56 +26,6 @@
 		}
 	});
 
-	let parent = document.querySelectorAll('.navlink')
-	//let linkdown = document.querySelectorAll('.dropdown')
-	if($(window).width() < 1025) {
-		for(let i=0; i < parent.length; i++) {
-		  parent[i].onclick = function(e) {
-		  // e.preventDefault()
-		  if( parent[i].classList.contains('active') ) {
-			parent[i].classList.remove('active')
-		  } else {
-			  for(let i=0; i < parent.length; i++) {
-				parent[i].classList.remove('active')
-			  }
-			  parent[i].classList.add('active')
-			}
-		  }
-		}
-	} else {
-		for(let i=0; i < parent.length; i++) {
-			parent[i].onclick = function(e) {
-				return true;
-			};
-			parent[i].classList.remove('active')
-		}
-	};
-	$(window).resize(function() {
-		if($(window).width() < 1025) {
-			for(let i=0; i < parent.length; i++) {
-				parent[i].onclick = function(e) {
-				// e.preventDefault()
-				if( parent[i].classList.contains('active') ) {
-					parent[i].classList.remove('active')
-				} else {
-						for(let i=0; i < parent.length; i++) {
-							parent[i].classList.remove('active')
-						}
-						parent[i].classList.add('active')
-					}
-				}
-			}
-		} else {
-			for(let i=0; i < parent.length; i++) {
-				parent[i].onclick = function(e) {
-					return true;
-				};
-				parent[i].classList.remove('active')
-			}
-		};
-	});
-	
-
 	document.addEventListener('DOMContentLoaded', () => {
 		let toTopBtn = document.querySelector('.to-up');
 		window.onscroll = function () {
