@@ -378,7 +378,7 @@ nav li {
 	nav ul > li:last-child a {
     border: 1px solid #fff;
     padding: 4px 15px;
-    background-color: #444;
+    background-color: #333;
 	}
 
 }
