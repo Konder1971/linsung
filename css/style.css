@@ -405,13 +405,19 @@ nav li {
 		position: fixed;
 		z-index: 99;
 		left: 100%;
-		top: 70px;
+		top: 50px;
 		width: 100%;
     transition: all 500ms ease-in-out;
     padding: 25px 22px;;
     height: calc(100vh - 70px);
 		overflow-y: auto;
 	}
+  .navigations.active {
+    background-color: #000;
+    left: 0;
+    transition: all 500ms ease-in-out;
+  }
+
 	.navigationActive .navigations {
     left: 0;
     transition: all 500ms ease-in-out;
@@ -473,4 +479,11 @@ nav li {
 }
 .contacts p span {
   color: #aaa;
+}
+
+@media (max-width: 767.98px) {
+  .portfolio h2 {
+    margin-top: 31px;
+    left: 0;
+  }
 }
