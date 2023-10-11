@@ -422,6 +422,7 @@ nav li {
 	}
 
 	.navigations {
+    background-color: #000;
 		position: fixed;
 		z-index: 99;
 		left: 100%;
@@ -433,7 +434,6 @@ nav li {
 		overflow-y: auto;
 	}
   .navigations.active {
-    background-color: #000;
     left: 0;
     transition: all 500ms ease-in-out;
   }
