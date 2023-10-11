@@ -486,7 +486,7 @@ nav li {
   left: 10px;
 }
 .portfolio p {
-  line-height: 32px;
+  line-height: 35px;
 }
 .skills ul,
 .skills li {
@@ -504,7 +504,7 @@ nav li {
 }
 .skills li {
   margin-top: 20px;
-  padding-bottom: 10px;
+  line-height: 32px;
 }
 
 .about {
@@ -516,7 +516,7 @@ nav li {
 .about p {
   text-align: center;
   margin-top: 17px;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
 }
 .contacts p span {
   color: #aaa;
