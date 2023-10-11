@@ -371,9 +371,16 @@ nav li {
 	}
 	nav ul > li a,
   nav li > span {
-		padding: 16px 28px 18px;
+		padding: 16px 18px 18px;
   	font-size: 22px;
 	}
+  
+	nav ul > li:last-child a {
+    border: 1px solid #fff;
+    padding: 4px 15px;
+    background-color: #444;
+	}
+
 }
 
 @media (max-width: 767.98px) {
@@ -452,6 +459,19 @@ nav li {
     line-height: 33px;
     margin-bottom: 20px;
 	}
+  
+	nav ul > li:last-child a {
+    font-size: 20px;
+    line-height: 33px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    display: table;
+    width: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #444;
+	}
+
 }
 /* navigations stop
 --------------------------------------------------- */
