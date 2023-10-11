@@ -205,6 +205,9 @@ a {
 	/*color: #00B465;*/
   color: #fff;
 }
+.logo a {
+  color: #fff;
+}
 .portfolio {
 	margin-bottom: 80px;
 }
@@ -488,7 +491,7 @@ nav li {
 .contacts p,
 .about p {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 17px;
   padding-bottom: 10px;
 }
 .contacts p span {
