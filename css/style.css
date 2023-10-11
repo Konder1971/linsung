@@ -101,12 +101,12 @@ img {
 .clearfix:after { clear: both; }
 
 button,
-html input[type="button"], /* 1 */
+html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    -webkit-appearance: button; /* 2 */
-    cursor: pointer; /* 3 */
-    *overflow: visible;  /* 4 */
+    -webkit-appearance: button;
+    cursor: pointer;
+    *overflow: visible;
 }
 
 button[disabled],
