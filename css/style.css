@@ -438,6 +438,9 @@ nav li {
   position: relative;
   left: 10px;
 }
+.portfolio p {
+  line-height: 32px;
+}
 .skills ul,
 .skills li {
   list-style: none;
@@ -467,9 +470,6 @@ nav li {
   text-align: center;
   margin-top: 20px;
   padding-bottom: 10px;
-}
-.about p {
-  line-height: 32px;
 }
 .contacts p span {
   color: #aaa;
