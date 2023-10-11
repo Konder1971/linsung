@@ -291,6 +291,9 @@ a {
 	.vaContainer {
 		padding: 0 20px;
 	}
+  .navigations .vaContainer {
+		padding: 0;
+	}
 	.portfolio__block a {
 		margin-bottom: 20px;
 	}
