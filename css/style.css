@@ -245,6 +245,9 @@ a {
     text-align: center;
     padding: 29px 0 15px;
 	}
+  .logo a.lang {
+    display: none;
+  }
 	.vaContainer {
 		max-width: 1290px;
 		margin: 0 auto;
