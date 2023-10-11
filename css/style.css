@@ -1,5 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');*/
 /* font-family: 'Roboto', sans-serif */
+
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto-Thin';
+	src: url('../fonts/Roboto-Thin.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto-Medium';
+	src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto-Light';
+	src: url('../fonts/Roboto-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto-Bold';
+	src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto-Black';
+	src: url('../fonts/Roboto-Black.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
 
 *, *:before, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -166,10 +209,12 @@ select {
 }
 body {
 	background-color: #000;
-	font-family: 'Roboto', sans-serif;
-	color: #000;
-	font-weight: 400;
+	font-family: 'Roboto-Regular', sans-serif;
+	color: #fff;
 	overflow-x: hidden;
+}
+a {
+  text-decoration: none;
 }
 
 .to-up {
@@ -193,38 +238,11 @@ body {
 
 /* top start
 --------------------------------------------------- */
-.top {
-	position: fixed;
-	z-index: 10;
-	left: 0;
-	top: 0;
-	width: 100%;
-	background-color: #000;
-	-webkit-transition: 300ms ease-out;
-	-moz-transition: 300ms ease-out;
-	transition: 300ms ease-out;
-}
 .logo {
 	color: #fff;
-	font-weight: 800;
-}
-.logo span {
+	font-family: 'Roboto-Bold', sans-serif;
 	color: #00B465;
 }
-.logo a {
-	text-decoration: none;
-}
-.logo a:hover span,
-.logo a:focus span {
-	color:#65C9FD;
-}
-.logo em {
-	font-style: normal;
-	color: #65C9FD;
-	cursor: default;
-	font-weight: 600;
-}
-
 .portfolio {
 	margin-bottom: 80px;
 }
@@ -235,7 +253,6 @@ body {
 .portfolio__block img {
 	display: block;
 }
-
 .portfolio__col-1 {
 	text-align: center;
 }
@@ -251,50 +268,15 @@ body {
 	.nav-toggle {
 		display: none;
 	}
-	body {
-		padding-top: 140px;
-	}
-	.top {	
-		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: center;
-		height: 114px;
-		-webkit-transition: 300ms ease-out;
-		-moz-transition: 300ms ease-out;
-		transition: 300ms ease-out;
-	}
-	.top_fixed {
-		height: 90px;
-		-webkit-transition: 300ms ease-out;
-		-moz-transition: 300ms ease-out;
-		transition: 300ms ease-out;
-	}
-	.top-content {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-		align-items: center;
-		max-width: 1290px;
-		margin: 0 auto;
-		padding: 0 60px;
-	}
-
 	.logo {
 		font-size: 45px;
+    text-align: center;
 	}
-	.logo em {
-		font-size: 33px;
-		padding-left: 20px;
-	}
-
 	.vaContainer {
 		max-width: 1290px;
 		margin: 0 auto;
 		padding: 0 60px;
 	}
-
 	.portfolio__block a:hover {
 		opacity: .7;
 	}
@@ -316,28 +298,16 @@ body {
 }
 
 @media (max-width: 767.98px) {
-	body {
-		padding-top: 100px;
-	}
-	.top {
-		height: 80px;
-	}
 	.top-content {
 		padding: 0 20px;
 	}
-
 	.logo {
 		padding-top: 7px;
 	}
 	.logo span {
 		display: block;
-		font-size: 30px;
+		font-size: 25px;
 	}
-	.logo em {
-		font-size: 19px;
-		display: block;
-	}
-	
 	.vaContainer {
 		padding: 0 20px;
 	}
@@ -348,3 +318,139 @@ body {
 /* top stop
 --------------------------------------------------- */
 
+/* navigations start
+--------------------------------------------------- */
+nav a,
+nav li > span {
+  line-height: 1;
+  display: block;
+	font-family: 'Roboto-Medium', sans-serif;
+  color: #65C9FD;
+}
+nav a:hover,
+nav a:focus {
+  color: #fff;
+}
+nav li > span {
+	cursor: default;
+  color: #fff;
+}
+nav ul,
+nav li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+@media (min-width: 768px) {
+	.nav-toggle {
+		display: none;
+	}
+	.navigations {
+		-webkit-transition: 300ms ease-out;
+		-moz-transition: 300ms ease-out;
+		transition: 300ms ease-out;
+	}
+  .navigations_fixed {
+    background-color: #000;
+		position: fixed;
+		z-index: 98;
+		top: 0;
+		width: 100%;
+		-webkit-transition: 300ms ease-out;
+		-moz-transition: 300ms ease-out;
+		transition: 300ms ease-out;
+	}
+	nav > ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+	nav ul > li {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+	}
+	nav ul > li a,
+  nav li > span {
+		padding: 16px 28px 18px;
+  	font-size: 22px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.nav-toggle {
+		position: relative;
+		display: inline-block;
+		width: 26px;
+		height: 24px;
+	}
+	.nav-toggle span { 
+		position: absolute;
+		left: 0; 
+		top: 10px;  
+	}
+	.nav-toggle span, 
+	.nav-toggle span:before,
+	.nav-toggle span:after {
+		position: absolute;
+		display: block;
+		content: '';
+		background-color: #fff;
+		cursor: pointer;
+		height: 3px;
+		width: 28px;
+		-webkit-transition: 300ms ease-out;
+		-moz-transition: 300ms ease-out;
+		transition: 300ms ease-out;
+	}
+	.nav-toggle span:before {
+		top: -8px;
+	}
+	.nav-toggle span:after {
+		bottom: -8px; 
+	}
+	.navigationActive .nav-toggle span {
+		background-color: transparent;
+	}
+	.navigationActive .nav-toggle span:before, 
+	.navigationActive .nav-toggle span:after {
+		top: 0;
+	}
+	.navigationActive .nav-toggle span:before {
+		transform: rotate(45deg);
+	}
+	.navigationActive .nav-toggle span:after {
+		transform: rotate(-45deg);
+	}
+
+	.navigations {
+		position: fixed;
+		z-index: 99;
+		left: 100%;
+		top: 70px;
+		width: 100%;
+    transition: all 500ms ease-in-out;
+    padding: 25px 22px;;
+    height: calc(100vh - 70px);
+		overflow-y: auto;
+	}
+	.navigationActive .navigations {
+    left: 0;
+    transition: all 500ms ease-in-out;
+	}
+  nav ul {
+    padding-bottom: 20px;
+  }
+	nav ul > li a,
+  nav li > span {
+    font-size: 29px;
+    line-height: 33px;
+    margin-bottom: 20px;
+	}
+}
+/* navigations stop
+--------------------------------------------------- */
