@@ -1,49 +1,6 @@
 /*-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');*/
 /* font-family: 'Roboto', sans-serif */
 
-@font-face {
-	font-family: 'Roboto-Regular';
-	src: url('../fonts/Roboto-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Roboto-Thin';
-	src: url('../fonts/Roboto-Thin.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Roboto-Medium';
-	src: url('../fonts/Roboto-Medium.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Roboto-Light';
-	src: url('../fonts/Roboto-Light.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Roboto-Bold';
-	src: url('../fonts/Roboto-Bold.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Roboto-Black';
-	src: url('../fonts/Roboto-Black.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
 *, *:before, *:after, *:before {
   -webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -209,7 +166,7 @@ select {
 }
 body {
 	background-color: #000;
-	font-family: 'Roboto-Regular', sans-serif;
+	font-family: sans-serif;
 	color: #fff;
 	overflow-x: hidden;
 }
@@ -240,7 +197,9 @@ a {
 --------------------------------------------------- */
 .logo {
 	color: #fff;
-	font-family: 'Roboto-Bold', sans-serif;
+	font-family: sans-serif;
+  font-weight: 600;
+  letter-spacing: .8px;
 	color: #00B465;
 }
 .portfolio {
@@ -265,12 +224,16 @@ a {
 }
 
 @media (min-width: 768px) {
+  .navigationsFixed .top .logo {
+    color:#000
+  }
 	.nav-toggle {
 		display: none;
 	}
 	.logo {
 		font-size: 45px;
     text-align: center;
+    padding: 29px 0 15px;
 	}
 	.vaContainer {
 		max-width: 1290px;
@@ -324,7 +287,9 @@ nav a,
 nav li > span {
   line-height: 1;
   display: block;
-	font-family: 'Roboto-Medium', sans-serif;
+	font-family: sans-serif;
+  font-weight: 500;
+  letter-spacing: .8px;
   color: #65C9FD;
 }
 nav a:hover,
@@ -351,11 +316,14 @@ nav li {
 		-moz-transition: 300ms ease-out;
 		transition: 300ms ease-out;
 	}
-  .navigations_fixed {
+  .navigationsFixed {
+    padding-top: 56px;
+  }
+  .navigationsFixed .navigations {
     background-color: #000;
 		position: fixed;
 		z-index: 98;
-		top: 0;
+		top: 0px;
 		width: 100%;
 		-webkit-transition: 300ms ease-out;
 		-moz-transition: 300ms ease-out;

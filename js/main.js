@@ -19,7 +19,7 @@
 
 	let top = $('.navigations');
 	$(window).scroll(function() {
-		if($(this).scrollTop() > 10) {
+		if($(this).scrollTop() > 96) {
 			top.addClass('navigations_fixed');
 		} else {
 			top.removeClass('navigations_fixed');
@@ -43,12 +43,6 @@
 		});
 	});
 
-/*
-	if($(".select").length > 0){
-		$(".select").selectmenu();
-	}
-*/
-
 	function isMac() {
 		return navigator.platform.indexOf('Mac') > -1
 	}
@@ -60,6 +54,21 @@
 	}
 
 })(jQuery);
+
+
+
+  // navigationsFixed start
+  document.addEventListener('DOMContentLoaded', () => {
+    let navigationsFixed = document.querySelector('body');
+    window.onscroll = function () {
+      if (window.pageYOffset > 96) {
+        navigationsFixed.classList.add('navigationsFixed')
+      } else {
+        navigationsFixed.classList.remove('navigationsFixed')
+      }
+    }
+  });
+  // navigationsFixed stop
 
 
 
