@@ -17,6 +17,12 @@
 		}
 	});
 
+  $('nav li > span').click(function () {
+    $('.nav-toggle.active').removeClass('active');
+    $('.navigations.active').removeClass('active');
+    $('.navlink.active').removeClass('active');
+  });
+
 	let top = $('.navigations');
 	$(window).scroll(function() {
 		if($(this).scrollTop() > 96) {
