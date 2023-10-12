@@ -9,7 +9,7 @@
 		if ($('.nav-toggle').hasClass('active')) {
 			$('.nav-toggle.active').removeClass('active');
 			$('.navigations.active').removeClass('active');
-			$('.navlink.active').removeClass('active');
+			//$('.navlink.active').removeClass('active');
 		}
 		else {
 			$('.nav-toggle').addClass('active');
@@ -20,7 +20,7 @@
   $('nav li > span').click(function () {
     $('.nav-toggle.active').removeClass('active');
     $('.navigations.active').removeClass('active');
-    $('.navlink.active').removeClass('active');
+    //$('.navlink.active').removeClass('active');
   });
 
 	let top = $('.navigations');

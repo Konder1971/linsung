@@ -421,19 +421,21 @@ nav li {
 	.nav-toggle span:after {
 		bottom: -8px; 
 	}
-	.navigationActive .nav-toggle span {
+  
+	.nav-toggle.active span {
 		background-color: transparent;
 	}
-	.navigationActive .nav-toggle span:before, 
-	.navigationActive .nav-toggle span:after {
+	.nav-toggle.active span:before, 
+  .nav-toggle.active span:after {
 		top: 0;
 	}
-	.navigationActive .nav-toggle span:before {
+	.nav-toggle.active span:before {
 		transform: rotate(45deg);
 	}
-	.navigationActive .nav-toggle span:after {
+	.nav-toggle.active span:after {
 		transform: rotate(-45deg);
 	}
+  
 
 	.navigations {
     background-color: #000;
