@@ -359,12 +359,12 @@ nav li {
 		-webkit-transition: 300ms ease-out;
 		-moz-transition: 300ms ease-out;
 		transition: 300ms ease-out;
+    background-color: #000;
 	}
   .navigationsFixed {
     padding-top: 56px;
   }
   .navigationsFixed .navigations {
-    background-color: #000;
 		position: fixed;
 		z-index: 98;
 		top: 0px;
