@@ -67,7 +67,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     let navigationsFixed = document.querySelector('body');
     window.onscroll = function () {
-      if (window.pageYOffset > 96) {
+      if (window.pageYOffset > 120) {
         navigationsFixed.classList.add('navigationsFixed')
       } else {
         navigationsFixed.classList.remove('navigationsFixed')
