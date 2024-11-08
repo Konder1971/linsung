@@ -16,6 +16,32 @@
 
     // Вызов функции при изменении размера окна
     $(window).resize(resizeImages);
+
+      // Открытие модального окна
+      $('.openModal').click(function () {
+        const modalId = $(this).data('modal');
+        const modal = $('#' + modalId);
+        
+        modal.addClass('show');
+        modal.find('.modal-content').addClass('show');
+      });
+  
+      // Закрытие модального окна
+      $('.close').click(function () {
+          const modal = $(this).closest('.modal');
+          modal.find('.modal-content').removeClass('show');
+          modal.removeClass('show');
+      });
+  
+      // Закрытие при клике вне модального окна
+      $(window).click(function (event) {
+          $('.modal').each(function() {
+              if ($(event.target).is(this)) {
+                  $(this).find('.modal-content').removeClass('show');
+                  $(this).removeClass('show');
+              }
+          });
+      });
     
   });
 })(jQuery);
