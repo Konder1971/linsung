@@ -176,6 +176,15 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 24px;
+  color: #96969a;
+}
+
 .to-up {
 	position: fixed;
 	bottom: 20px;
@@ -214,25 +223,43 @@ a {
   font-weight: normal;
   margin-top: 23px;
 }
+
 .portfolio {
 	margin-bottom: 80px;
 }
-.portfolio__block a {
+.eimage-link {
+  background-repeat: no-repeat;
+  background-position: center top;	
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: 10px;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+}
+.eimage-link:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: 300ms ease-out;
+  -moz-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+.eimage-link img {
+  opacity: 0;
+  min-width: 100%;
 	display: block;
-	text-decoration: none;
 }
-.portfolio__block img {
-	display: block;
-}
-.portfolio__col-1 {
-	text-align: center;
-}
-.video1 video {
-	max-height: 80vh;
-	max-width: 80vw;
+
+.portfolio-video {
+	max-height: 100%;
 	width: auto;
-	cursor: pointer;
+  display: block;
+  overflow: hidden!important;
+	/*cursor: pointer;*/
 	margin: 0 auto 20px;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -255,29 +282,16 @@ a {
 		margin: 0 auto;
 		padding: 0 60px;
 	}
-	.portfolio__block a:hover {
-		opacity: .7;
+	.portfolio {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
 	}
-	.portfolio__block {
-		display: grid;
-		margin-bottom: 20px;
-	}
-	.portfolio__col-2,
-	.portfolio__col-3 {
-		grid-gap: 30px;
-	}
-	.portfolio__col-2 {
-		grid-template-columns: 1fr 1fr;
-	}
-	.portfolio__col-3 {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-
   .lightbox .lb-image {
     margin: 0 auto;
     max-width: 1200px;
   }
-
 }
 
 @media (max-width: 767.98px) {
@@ -321,9 +335,14 @@ a {
   .navigations .vaContainer {
 		padding: 0;
 	}
-	.portfolio__block a {
+	.eimage-link {
 		margin-bottom: 20px;
 	}
+  .eimage-link:hover,
+  .eimage-link:focus {
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 /* top stop
 --------------------------------------------------- */
@@ -500,16 +519,6 @@ nav li {
 /* navigations stop
 --------------------------------------------------- */
 
-.portfolio h2 {
-  text-align: center;
-  margin-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 400;
-  font-size: 24px;
-  position: relative;
-  left: 10px;
-  color: #96969a;
-}
 .portfolio p {
   line-height: 35px;
 }
@@ -548,7 +557,5 @@ nav li {
 }
 
 @media (max-width: 767.98px) {
-  .portfolio h2 {
-    left: 0;
-  }
+
 }
