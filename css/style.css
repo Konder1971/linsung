@@ -244,6 +244,7 @@ h1 {
   -moz-transition: 300ms ease-out;
   transition: 300ms ease-out;
 }
+
 .eimage-link img {
   opacity: 0;
   min-width: 100%;
@@ -257,7 +258,6 @@ h1 {
   overflow: hidden!important;
 	cursor: pointer;
 	margin: 0 auto 20px;
-  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -282,13 +282,22 @@ h1 {
 	}
 	.portfolio {
     display: grid;
-    grid-gap: 8px;
+    grid-gap: 6px;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
 	}
   .lightbox .lb-image {
     margin: 0 auto;
     max-width: 1200px;
+  }
+  
+  .eimage-link,
+  .portfolio-video {
+    border: 2px solid transparent;
+  }
+  .eimage-link:hover,
+  .portfolio-video:hover {
+    border: 2px solid #fff;
   }
 }
 
