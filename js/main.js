@@ -11,28 +11,50 @@
       });
     }
 
+    const navToggle = $('.nav-toggle');
+    const navigations = $('.navigations');
+    navToggle.click(function () {
+      const isActive = navToggle.hasClass('active');
+      navToggle.toggleClass('active', !isActive);
+      navigations.toggleClass('active', !isActive);
+    });
+    $('nav li > span').click(function () {
+      navToggle.removeClass('active');
+      navigations.removeClass('active');
+    });
+
+    let top = $('.navigations');
+    const scrollThreshold = 161; // Пороговое значение для добавления класса
+    // Функция для обработки прокрутки
+    function handleScroll() {
+      const scrollTop = $(this).scrollTop();
+      top.toggleClass('navigations_fixed', scrollTop > scrollThreshold);
+    }
+    // Дебаунс для оптимизации события прокрутки
+    let lastTimeout = null;
+    $(window).scroll(function() {
+      clearTimeout(lastTimeout);
+      lastTimeout = setTimeout(handleScroll, 10); // Задержка 10ms
+    });
+
+
     // Начальный вызов для установки высоты изображений
     resizeImages();
-
     // Вызов функции при изменении размера окна
     $(window).resize(resizeImages);
-
       // Открытие модального окна
       $('.openModal').click(function () {
         const modalId = $(this).data('modal');
         const modal = $('#' + modalId);
-        
         modal.addClass('show');
         modal.find('.modal-content').addClass('show');
       });
-  
       // Закрытие модального окна
       $('.close').click(function () {
           const modal = $(this).closest('.modal');
           modal.find('.modal-content').removeClass('show');
           modal.removeClass('show');
       });
-  
       // Закрытие при клике вне модального окна
       $(window).click(function (event) {
           $('.modal').each(function() {

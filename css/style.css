@@ -175,7 +175,6 @@ body {
 a {
   text-decoration: none;
 }
-
 .to-up {
 	position: fixed;
 	bottom: 20px;
@@ -194,7 +193,6 @@ a {
 .to-up:hover {
 	opacity: .8;
 }
-
 h1 {
   text-align: center;
   margin: 15px 0 26px;
@@ -202,7 +200,6 @@ h1 {
   font-size: 24px;
   color: #96969a;
 }
-
 .vaMain {
   margin: 0 auto 80px;
   text-align: center;
@@ -211,7 +208,6 @@ h1 {
   line-height: 35px;
   margin-top: 10px;
 }
-
 .about {
   max-width: 600px;
 }
@@ -232,11 +228,9 @@ h1 {
 .contacts p span {
   color: #96969a;
 }
-
 .logo {
 	color: #fff;
-  font-weight: 900;
-  color: #fff;
+  font-weight: 700;
 }
 .logo a {
   color: #fff;
@@ -245,12 +239,6 @@ h1 {
 .logo a:focus span {
   color: #26bbff;
 }
-.logo p {   
-	font-size: 20px;
-  font-weight: normal;
-  margin-top: 23px;
-}
-
 .eimage-link {
   background-repeat: no-repeat;
   background-position: center center;	
@@ -270,13 +258,11 @@ h1 {
   -moz-transition: 300ms ease-out;
   transition: 300ms ease-out;
 }
-
 .eimage-link img {
   opacity: 0;
   min-width: 100%;
 	display: block;
 }
-
 .portfolio-video {
   border-radius: 10px;
 	width: auto;
@@ -288,20 +274,33 @@ h1 {
 }
 
 @media (min-width: 768px) {
-  .navigationsFixed .top .logo {
-    color:#000
+  .top-container {
+    max-width: 1360px;
+    margin: 20px auto 20px;
+    padding: 0 40px;
   }
+  .top-content {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px 20px 30px;
+    text-align: center;
+  }
+
 	.nav-toggle {
 		display: none;
 	}
 	.logo {
 		font-size: 45px;
-    text-align: center;
-    padding: 29px 0 15px;
+    padding: 0px 0 0px;
 	}
   .logo a.lang {
     display: none;
   }
+  .top p {   
+    font-size: 20px;
+    margin-top: 12px;
+  }
+
 	.vaContainer {
 		max-width: 1360px;
 		margin: 0 auto;
@@ -367,7 +366,7 @@ h1 {
     left: 20px;
     font-weight: 400;
   }
-  .logo p {   
+  .top p {   
     font-size: 16px;
     margin-top: 13px;
   }
@@ -385,34 +384,6 @@ h1 {
     -webkit-transform: none;
     transform: none;
   }
-}
-
-
-.modal {
-  display: none; /* Скрыто по умолчанию */
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-}
-
-.modal-content {
-  border: 1px solid #f00;
-  width: 50vw; /* Ширина окна */
-  max-width: 500px; /* Максимальная ширина */
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.modal.show {
-  display: block; /* Показать модальное окно */
-}
-
-.modal-content.show {
-  opacity: 1; /* Установить непрозрачность */
 }
 
 /* navigations start
@@ -437,6 +408,9 @@ nav li {
 	padding: 0;
 	list-style: none;
 }
+.navigations {
+  background-color: #000;
+}
 
 @media (min-width: 768px) {
 	.nav-toggle {
@@ -446,12 +420,9 @@ nav li {
 		-webkit-transition: 300ms ease-out;
 		-moz-transition: 300ms ease-out;
 		transition: 300ms ease-out;
-    background-color: #000;
 	}
-  .navigationsFixed {
-    padding-top: 56px;
-  }
-  .navigationsFixed .navigations {
+
+  .navigations_fixed {
 		position: fixed;
 		z-index: 98;
 		top: 0px;
@@ -460,6 +431,9 @@ nav li {
 		-moz-transition: 300ms ease-out;
 		transition: 300ms ease-out;
 	}
+  .navigations_fixed .vaContent {
+    /*border-bottom: 2px solid #999;*/
+  }
 	nav > ul {
 		display: flex;
 		flex-direction: row;
@@ -574,6 +548,7 @@ nav li {
     font-size: 14px;
     line-height: 26px;
     margin-bottom: 0;
+    margin-top: 30px;
     border: 1px solid #fff;
     display: table;
     width: auto;
@@ -585,3 +560,31 @@ nav li {
 }
 /* navigations stop
 --------------------------------------------------- */
+
+
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.modal-content {
+  border: 1px solid #f00;
+  width: 50vw; /* Ширина окна */
+  max-width: 500px; /* Максимальная ширина */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.modal.show {
+  display: block; /* Показать модальное окно */
+}
+
+.modal-content.show {
+  opacity: 1; /* Установить непрозрачность */
+}
