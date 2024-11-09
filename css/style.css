@@ -312,6 +312,7 @@ h1 {
     /*grid-gap: 1px;*/
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
+    margin-top: 10px;
 	}
   .lightbox .lb-image {
     margin: 0 auto;
