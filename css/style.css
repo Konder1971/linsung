@@ -252,12 +252,13 @@ h1 {
 }
 
 .portfolio-video {
-	max-height: 100%;
+  border-radius: 10px;
 	width: auto;
+	max-height: 100%;
+  max-width: 100%;
   display: block;
   overflow: hidden!important;
 	cursor: pointer;
-	margin: 0 auto 20px;
 }
 
 @media (min-width: 768px) {
@@ -298,6 +299,14 @@ h1 {
   .eimage-link:hover,
   .portfolio-video:hover {
     border: 4px solid #fff;
+  } 
+  .eimage-link:hover,
+  .portfolio-video:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition: 300ms ease-out;
+    -moz-transition: 300ms ease-out;
+    transition: 300ms ease-out;
   }
 }
 
@@ -359,16 +368,14 @@ h1 {
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow: auto;
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* Центрирование по вертикали */
   border: 1px solid #f00;
-  width: 80%; /* Ширина окна */
+  width: 50%; /* Ширина окна */
   max-width: 500px; /* Максимальная ширина */
   opacity: 0;
   transition: opacity 0.5s ease;
