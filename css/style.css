@@ -338,6 +338,9 @@ h1 {
     -moz-transition: 300ms ease-out;
     transition: 300ms ease-out;
   }
+  .skills {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 767.98px) {
