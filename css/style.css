@@ -627,6 +627,11 @@ nav li {
     opacity: 1;
   }
 }
+@media (max-width: 767.98px) {
+  .modal {
+    display: none!important;
+  }
+}
 
 .lb-outerContainer,
 .lb-outerContainer {
