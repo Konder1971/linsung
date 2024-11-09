@@ -321,10 +321,11 @@ h1 {
   .portfolio-video {
     border: 4px solid transparent;
   }
+   
   .eimage-link:hover,
   .portfolio-video:hover {
     border: 4px solid #fff;
-  } */
+  }*/
   .eimage-link:hover,
   .portfolio-video:hover {
     -webkit-transform: scale(1.05);
