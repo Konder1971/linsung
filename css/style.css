@@ -307,7 +307,8 @@ h1 {
 		display: none;
 	}
 	.logo {
-		font-size: 45px;
+		/*font-size: 45px;*/
+    font-size: 59px;
     padding: 0px 0 0px;
     font-weight: 800;
 	}
