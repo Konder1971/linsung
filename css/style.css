@@ -239,17 +239,17 @@ h1 {
   color: #fff;
 }
 .logo span {
-  color: #fff;
-  /*color: transparent;
+  /*color: #fff;*/
+  color: transparent;
   background-image: linear-gradient(#ED0000, #F68B27);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-box-decoration-break: clone;*/
+  -webkit-box-decoration-break: clone;
 }
 .logo a:hover span,
 .logo a:focus span {
-  color: #26bbff;
-  /*background-image: linear-gradient(#F68B27,#ED0000);*/
+  /*color: #26bbff;*/
+  background-image: linear-gradient(#F68B27,#ED0000);
 }
 .eimage-link {
   background-repeat: no-repeat;
@@ -456,8 +456,9 @@ nav li {
 		-moz-transition: 300ms ease-out;
 		transition: 300ms ease-out;
 	}
-  .navigations_fixed .vaContent {
-    /*border-bottom: 2px solid #999;*/
+  .navigations .vaContent {
+    border-top: 2px solid #666;
+    border-bottom: 2px solid #666;
   }
 	nav > ul {
 		display: flex;
