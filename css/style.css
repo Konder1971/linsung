@@ -386,15 +386,18 @@ h1 {
 		padding-top: 17px;
 	}
 	.logo span {
-		font-size: 19px;
+    color: #fff;
+    background-image: none;
+		font-size: 21px;
     font-weight: 600;
 	}
   .logo .lang {
     display: inline-block;
     font-size: 14px;
     position: relative;
-    left: 20px;
+    left: 9px;
     font-weight: 400;
+    top: -1px;
   }
   .top p {   
     font-size: 16px;
@@ -489,19 +492,34 @@ nav .lang:hover {
 	nav ul > li {
 		position: relative;
 		z-index: 1;
-		display: flex;
-		align-items: center;
     width: 25%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
+    padding: 4px 2px;
 	}
+  nav ul > li:nth-child(1) {
+    padding-left: 0;
+  }
+  nav ul > li:nth-child(4) {
+    padding-right: 0;
+  }
 	nav ul > li a {
-		padding: 16px 18px 18px;
+		padding: 18px 0px;
   	font-size: 18px;
+    display: block;
+    text-align: center;
+    background-color: #333;
 	}
+  nav ul > li a:hover,
+  nav ul > li a.active {
+    background-color: #666;
+    color: #fff;
+  }
+  nav ul > li a.active {
+    cursor: default;
+  }
   
   nav ul > li:last-child {
     position: absolute;
@@ -509,6 +527,7 @@ nav .lang:hover {
     right: 30px;
     display: inline-block;
     width: auto;
+    padding: 0;
   }
 
 }
@@ -517,7 +536,7 @@ nav .lang:hover {
 	.nav-toggle {
 		position: fixed;
     z-index: 100;
-    top: 18px;
+    top: 20px;
     right: 22px;
 		display: inline-block;
 		width: 26px;
