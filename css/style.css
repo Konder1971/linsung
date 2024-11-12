@@ -247,7 +247,7 @@ h1 {
 .logo span {
   /*color: #fff;*/
   color: transparent;
-  background-image: linear-gradient(#ED0000, #F68B27);
+  background-image: linear-gradient(#F68B27,#ED0000);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-box-decoration-break: clone;
@@ -255,7 +255,7 @@ h1 {
 .logo a:hover span,
 .logo a:focus span {
   /*color: #26bbff;*/
-  background-image: linear-gradient(#F68B27,#ED0000);
+  background-image: linear-gradient(#ED0000, #F68B27);
 }
 .eimage-link {
   background-repeat: no-repeat;
