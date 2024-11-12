@@ -88,12 +88,14 @@
       const modal = $('#' + modalId);
       modal.addClass('show');
       modal.find('.modal-content').addClass('show');
+      $('body').addClass('no-scroll'); // Добавляем класс no-scroll к body
     });
 
     $('.close').click(function () {
       const modal = $(this).closest('.modal');
       modal.find('.modal-content').removeClass('show');
       modal.removeClass('show');
+      $('body').removeClass('no-scroll'); // Убираем класс no-scroll у body
     });
 
     // Закрытие при клике вне модального окна
@@ -102,6 +104,7 @@
         if ($(event.target).is(this)) {
           $(this).find('.modal-content').removeClass('show');
           $(this).removeClass('show');
+          $('body').removeClass('no-scroll'); // Убираем класс no-scroll у body при клике вне
         }
       });
     });
