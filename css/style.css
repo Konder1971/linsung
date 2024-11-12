@@ -199,13 +199,6 @@ a {
 .to-up:hover {
 	opacity: .8;
 }
-h1 {
-  text-align: center;
-  margin: 15px 0 26px;
-  font-weight: 400;
-  font-size: 24px;
-  color: #96969a;
-}
 .vaMain {
   margin: 35px auto 80px;
   text-align: center;
@@ -244,7 +237,8 @@ h1 {
 .logo a {
   color: #fff;
 }
-.logo span {
+.logo h1,
+.logo h1 a {
   /*color: #fff;*/
   color: transparent;
   background-image: linear-gradient(#F68B27,#ED0000);
@@ -252,8 +246,8 @@ h1 {
   background-clip: text;
   -webkit-box-decoration-break: clone;
 }
-.logo a:hover span,
-.logo a:focus span {
+.logo h1 a:hover,
+.logo h1 a:focus {
   /*color: #26bbff;*/
   background-image: linear-gradient(#ED0000, #F68B27);
 }
@@ -312,7 +306,8 @@ h1 {
 	.nav-toggle {
 		display: none;
 	}
-	.logo {
+  .logo h1,
+  .logo h1 a {
 		/*font-size: 45px;*/
     font-size: 59px;
     padding: 0px 0 0px;
@@ -385,11 +380,13 @@ h1 {
     width: auto;
 		padding-top: 17px;
 	}
-	.logo span {
+  .logo h1,
+  .logo h1 a {
     color: #fff;
     background-image: none;
 		font-size: 21px;
     font-weight: 600;
+    display: inline-block;
 	}
   .logo .lang {
     display: inline-block;
