@@ -1,6 +1,48 @@
 (function ($) {
   $(document).ready(function () {
     
+    const $body = $('body');
+    const $navigations = $('.navigations');
+    const $langToggle = $('.lang');
+
+    // Проверяем наличие класса языка в localStorage и применяем его к body
+    const savedLangClass = localStorage.getItem('langClass');
+    if (savedLangClass) {
+      // Применяем сохраненный класс только если он существует
+      $body.removeClass('lang-ukr lang-eng').addClass(savedLangClass);
+    } else {
+      // Убедитесь, что по умолчанию установлен класс lang-ukr
+      $body.addClass('lang-ukr');
+      localStorage.setItem('langClass', 'lang-ukr'); // Сохраняем язык по умолчанию
+    }
+
+    // Функция для переключения классов языка
+    function toggleLanguageClass() {
+      if ($body.hasClass('lang-ukr')) {
+        $body.removeClass('lang-ukr').addClass('lang-eng'); // Переключаем на английский
+        localStorage.setItem('langClass', 'lang-eng'); // Сохраняем состояние
+      } else {
+        $body.removeClass('lang-eng').addClass('lang-ukr'); // Переключаем на украинский
+        localStorage.setItem('langClass', 'lang-ukr'); // Сохраняем состояние
+      }
+    }
+
+    // Обработчик клика на элемент с классом lang
+    $langToggle.click(toggleLanguageClass);
+
+    // Функция для добавления класса активного элемента в навигации
+    function setActiveMenuItem() {
+      const currentPath = window.location.pathname; // Получаем текущий путь
+      $('nav .nav-item').each(function () {
+        const linkPath = $(this).attr('href'); // Получаем href элемента
+        if (currentPath.includes(linkPath)) { // Проверяем, совпадает ли путь
+          $(this).addClass('active'); // Добавляем класс active
+        }
+      });
+    }
+
+    setActiveMenuItem(); // Вызов функции при загрузке страницы
+
     // Функция для изменения высоты изображений и видео
     function resizeMedia() {
       $('.eimage-link img, .portfolio-video').each(function () {
@@ -10,17 +52,16 @@
 
     // Работа с навигацией
     const navToggle = $('.nav-toggle');
-    const navigations = $('.navigations');
-
     navToggle.click(function () {
       const isActive = navToggle.hasClass('active');
       navToggle.toggleClass('active', !isActive);
-      navigations.toggleClass('active', !isActive);
+      $navigations.toggleClass('active', !isActive);
     });
 
-    $('nav li > span').click(function () {
+    // Удаляем класс active у навигации при клике на элемент nav .lang
+    $('nav .lang').click(function () {
       navToggle.removeClass('active');
-      navigations.removeClass('active');
+      $navigations.removeClass('active');
     });
 
     // Фиксированная навигация при прокрутке
@@ -67,3 +108,107 @@
 
   });
 })(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//(function ($) {
+//  $(document).ready(function () {
+    
+//    // Константы
+//    const SCROLL_THRESHOLD = 161; // Значение порога скролла
+//    const $body = $('body');
+//    const $navToggle = $('.nav-toggle');
+//    const $navigations = $('.navigations');
+//    const $langToggle = $('.lang');
+
+//    // Функция для переключения классов языка
+//    function toggleLanguageClass() {
+//      $body.toggleClass('lang-ukr lang-eng');
+//    }
+
+//    // Функция для добавления класса активного элемента в навигации
+//    function setActiveMenuItem() {
+//      const currentPath = window.location.pathname; // Получаем текущий путь
+//      $('nav .nav-item').each(function () {
+//        const linkPath = $(this).attr('href'); // Получаем href элемента
+//        if (currentPath.includes(linkPath)) { // Проверяем, совпадает ли путь
+//          $(this).addClass('active'); // Добавляем класс active
+//        }
+//      });
+//    }
+
+//    // Функция для изменения высоты изображений и видео
+//    function resizeMedia() {
+//      $('.eimage-link img, .portfolio-video').each(function () {
+//        $(this).css('height', $(this).width() + 'px');
+//      });
+//    }
+
+//    // Функция обработки скролла
+//    function handleScroll() {
+//      const scrollTop = $(this).scrollTop();
+//      $navigations.toggleClass('navigations_fixed', scrollTop > SCROLL_THRESHOLD);
+//    }
+
+//    // Инициализация событий
+//    function initializeEventHandlers() {
+//      $langToggle.click(() => {
+//        toggleLanguageClass();
+//        $navToggle.removeClass('active');
+//        $navigations.removeClass('active');
+//      });
+
+//      $navToggle.click(function () {
+//        $(this).toggleClass('active');
+//        $navigations.toggleClass('active');
+//      });
+
+//      // Обработка скролла
+//      $(window).scroll(handleScroll);
+
+//      // Изменение размера медиа при загрузке и изменении окна
+//      $(window).resize(resizeMedia);
+//    }
+
+//    // Работа с модальными окнами
+//    function initializeModals() {
+//      $('.openModal').click(function () {
+//        const modalId = $(this).data('modal');
+//        $('#' + modalId).addClass('show').find('.modal-content').addClass('show');
+//      });
+
+//      $('.close').click(function () {
+//        const $modal = $(this).closest('.modal');
+//        $modal.find('.modal-content').removeClass('show');
+//        $modal.removeClass('show');
+//      });
+
+//      // Закрытие при клике вне модального окна
+//      $(window).click(function (event) {
+//        $('.modal').each(function () {
+//          if ($(event.target).is(this)) {
+//            $(this).find('.modal-content').removeClass('show');
+//            $(this).removeClass('show');
+//          }
+//        });
+//      });
+//    }
+
+//    // Инициализация всего
+//    setActiveMenuItem();
+//    resizeMedia();
+//    initializeEventHandlers();
+//    initializeModals();
+
+//  });
+//})(jQuery);

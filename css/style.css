@@ -164,6 +164,12 @@ select {
 		display: none!important;
 	}
 }
+
+.lang-ukr .eng,
+.lang-eng .ukr {
+  display: none;
+}
+
 body {
 	background-color: #000;
   font-family: 'Inter', sans-serif;
@@ -201,7 +207,7 @@ h1 {
   color: #96969a;
 }
 .vaMain {
-  margin: 0 auto 80px;
+  margin: 35px auto 80px;
   text-align: center;
 }
 .vaMain p {
@@ -312,7 +318,7 @@ h1 {
     padding: 0px 0 0px;
     font-weight: 800;
 	}
-  .logo a.lang {
+  .logo .lang {
     display: none;
   }
   .top p {   
@@ -356,9 +362,6 @@ h1 {
     -moz-transition: 300ms ease-out;
     transition: 300ms ease-out;
   }
-  .skills {
-    margin-top: 10px;
-  }
 }
 
 @media (max-width: 767.98px) {
@@ -386,7 +389,8 @@ h1 {
 		font-size: 19px;
     font-weight: 600;
 	}
-  .logo a.lang {
+  .logo .lang {
+    display: inline-block;
     font-size: 14px;
     position: relative;
     left: 20px;
@@ -415,18 +419,17 @@ h1 {
 
 /* navigations start
 --------------------------------------------------- */
-nav a,
-nav li > span {
+nav a {
   line-height: 1;
   display: block;
   color: #fff;
 }
 nav a:hover,
 nav a:focus,
-nav li > span {
+nav a.active {
   color: #26bbff;
 }
-nav li > span {
+nav a.active {
 	cursor: default;
 }
 nav ul,
@@ -437,6 +440,19 @@ nav li {
 }
 .navigations {
   background-color: #000;
+}
+nav .lang {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 6px;
+  background-color: #333;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+nav .lang:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -482,8 +498,7 @@ nav li {
     justify-content: center;
     align-items: center;
 	}
-	nav ul > li a,
-  nav li > span {
+	nav ul > li a {
 		padding: 16px 18px 18px;
   	font-size: 18px;
 	}
@@ -494,17 +509,6 @@ nav li {
     right: 30px;
     display: inline-block;
     width: auto;
-  }
-	nav ul > li:last-child a {
-    border: 1px solid #fff;
-    padding: 4px 4px 4px 5px;
-    background-color: #333;
-    font-size: 14px;
-  }
-  nav ul > li:last-child a:hover {
-    /*border: 1px solid #26bbff;*/
-    background-color: #000;
-    color: #fff;
   }
 
 }
@@ -581,25 +585,20 @@ nav li {
     left: 0;
     transition: all 500ms ease-in-out;
 	}
-	nav ul > li a,
-  nav li > span {
+	nav ul > li a {
     font-size: 29px;
     line-height: 33px;
     margin-bottom: 20px;
 	}
   
-	nav ul > li:last-child a {
-    font-size: 14px;
-    line-height: 26px;
-    margin-bottom: 0;
-    margin-top: 30px;
-    border: 1px solid #fff;
+	nav .lang {
+    margin-top: 30px;;
     display: table;
     width: auto;
-    padding-left: 6px;
-    padding-right: 6px;
-    background-color: #333;
 	}
+  nav .lang:focus {
+    background-color: #000;
+  }
 
 }
 /* navigations stop
