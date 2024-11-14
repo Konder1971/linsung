@@ -262,6 +262,9 @@ a {
   display: block;
   overflow: hidden;
   text-decoration: none;
+  -webkit-transition: 300ms ease-out;
+  -moz-transition: 300ms ease-out;
+  transition: 300ms ease-out;
 }
 .eimage-link:hover {
   -webkit-transform: scale(1.05);
