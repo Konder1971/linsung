@@ -271,7 +271,6 @@ a {
   transition: 300ms ease-out;
 }
 .eimage-link img {
-  opacity: 0;
   min-width: 100%;
 	display: block;
 }
