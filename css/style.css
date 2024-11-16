@@ -203,11 +203,22 @@ a {
   margin: 35px auto 80px;
   text-align: center;
 }
+.vaMain .hr-1 {
+  margin: 25px auto 35px;
+  background-color: #666;
+  height: 2px;
+  border: none;
+}
+.contacts .hr-1 {
+  margin-top: 35px;
+}
 .vaMain p {
-  line-height: 30px;
+  line-height: 35px;
   margin-top: 10px;
 }
-.about {
+.about,
+.skills,
+.contacts {
   max-width: 600px;
 }
 .about p {
