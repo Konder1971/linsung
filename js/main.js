@@ -45,7 +45,7 @@
 
     // Функция для изменения высоты изображений и видео
     function resizeMedia() {
-      $('.eimage-link img, .portfolio-video').each(function () {
+      $('.eimage-link, .portfolio-video').each(function () {
         $(this).css('height', $(this).width() + 'px');
       });
     }
