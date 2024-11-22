@@ -1,18 +1,5 @@
 (function ($) {
   $(document).ready(function () {
-
-    // Функция для добавления класса активного элемента в навигации
-    function setActiveMenuItem() {
-      const currentPath = window.location.pathname; // Получаем текущий путь
-      $('nav .nav-item').each(function () {
-        const linkPath = $(this).attr('href'); // Получаем href элемента
-        if (currentPath.includes(linkPath)) { // Проверяем, совпадает ли путь
-          $(this).addClass('active'); // Добавляем класс active
-        }
-      });
-    }
-
-    setActiveMenuItem(); // Вызов функции при загрузке страницы
     
     const $body = $('body');
     const $navigations = $('.navigations');
@@ -42,6 +29,19 @@
 
     // Обработчик клика на элемент с классом lang
     $langToggle.click(toggleLanguageClass);
+
+    // Функция для добавления класса активного элемента в навигации
+    function setActiveMenuItem() {
+      const currentPath = window.location.pathname; // Получаем текущий путь
+      $('nav .nav-item').each(function () {
+        const linkPath = $(this).attr('href'); // Получаем href элемента
+        if (currentPath.includes(linkPath)) { // Проверяем, совпадает ли путь
+          $(this).addClass('active'); // Добавляем класс active
+        }
+      });
+    }
+
+    setActiveMenuItem(); // Вызов функции при загрузке страницы
 
     // Функция для изменения высоты изображений и видео
     function resizeMedia() {
