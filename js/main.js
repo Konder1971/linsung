@@ -5,7 +5,7 @@
     const $langToggle = $('.lang');
     const $modalCloseButtons = $('.close');
     const navToggle = $('.nav-toggle');
-    const scrollThreshold = 161;
+    const scrollThreshold = 220;
 
     // Установить сохранённый язык из localStorage или использовать по умолчанию
     const savedLangClass = localStorage.getItem('langClass') || 'lang-ukr';
