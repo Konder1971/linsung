@@ -1,133 +1,108 @@
 (function ($) {
   $(document).ready(function () {
-
     const $body = $('body');
     const $navigations = $('.navigations');
     const $langToggle = $('.lang');
+    const $modalCloseButtons = $('.close');
+    const navToggle = $('.nav-toggle');
+    const scrollThreshold = 161;
 
-    // Проверяем наличие класса языка в localStorage и применяем его к body
-    const savedLangClass = localStorage.getItem('langClass');
-    if (savedLangClass) {
-      // Применяем сохраненный класс только если он существует
-      $body.removeClass('lang-ukr lang-eng').addClass(savedLangClass);
-    } else {
-      // Убедитесь, что по умолчанию установлен класс lang-ukr
-      $body.addClass('lang-ukr');
-      localStorage.setItem('langClass', 'lang-ukr'); // Сохраняем язык по умолчанию
-    }
+    // Установить сохранённый язык из localStorage или использовать по умолчанию
+    const savedLangClass = localStorage.getItem('langClass') || 'lang-ukr';
+    $body.removeClass('lang-ukr lang-eng').addClass(savedLangClass);
+    localStorage.setItem('langClass', savedLangClass);
 
-    // Функция для переключения классов языка
+    // Функция для переключения класса языка
     function toggleLanguageClass() {
-      if ($body.hasClass('lang-ukr')) {
-        $body.removeClass('lang-ukr').addClass('lang-eng'); // Переключаем на английский
-        localStorage.setItem('langClass', 'lang-eng'); // Сохраняем состояние
-      } else {
-        $body.removeClass('lang-eng').addClass('lang-ukr'); // Переключаем на украинский
-        localStorage.setItem('langClass', 'lang-ukr'); // Сохраняем состояние
-      }
+      const newLangClass = $body.hasClass('lang-ukr') ? 'lang-eng' : 'lang-ukr';
+      $body.removeClass('lang-ukr lang-eng').addClass(newLangClass);
+      localStorage.setItem('langClass', newLangClass);
     }
 
-    // Обработчик клика на элемент с классом lang
-    $langToggle.click(toggleLanguageClass);
+    // Событие для переключения языка
+    $langToggle.on('click', toggleLanguageClass);
 
-    // Функция для добавления класса активного элемента в навигации
-    //function setActiveMenuItem() {
-    //  const currentPath = window.location.pathname; // Получаем текущий путь
-    //  $('nav .nav-item').each(function () {
-    //    const linkPath = $(this).attr('href'); // Получаем href элемента
-    //    if (currentPath.includes(linkPath)) { // Проверяем, совпадает ли путь
-    //      $(this).addClass('active'); // Добавляем класс active
-    //    }
-    //  });
-    //}
-
-    // setActiveMenuItem(); // Вызов функции при загрузке страницы
-
-    // Функция для изменения высоты изображений и видео
+    // Функция изменения размера медиа
     function resizeMedia() {
       $('.eimage-link, .portfolio-video').each(function () {
         $(this).css('height', $(this).width() + 'px');
       });
     }
 
-    // Работа с навигацией
-    const navToggle = $('.nav-toggle');
-    navToggle.click(function () {
-      const isActive = navToggle.hasClass('active');
-      navToggle.toggleClass('active', !isActive);
-      $navigations.toggleClass('active', !isActive);
+    // Функциональность переключения навигации
+    navToggle.on('click', function () {
+      const isActive = navToggle.toggleClass('active').hasClass('active');
+      $navigations.toggleClass('active', isActive);
     });
 
-    // Удаляем класс active у навигации при клике на элемент nav .lang
-    $('nav .lang').click(function () {
+    // Удалить класс active при клике на язык
+    $('nav').on('click', '.lang', function () {
       navToggle.removeClass('active');
       $navigations.removeClass('active');
     });
 
     // Фиксированная навигация при прокрутке
-    const top = $('.navigations');
-    const scrollThreshold = 161;
-
     function handleScroll() {
       const scrollTop = $(this).scrollTop();
-      top.toggleClass('navigations_fixed', scrollTop > scrollThreshold);
+      $('.navigations').toggleClass('navigations_fixed', scrollTop > scrollThreshold);
     }
 
-    let lastTimeout = null;
-    $(window).scroll(function () {
-      clearTimeout(lastTimeout);
-      lastTimeout = setTimeout(handleScroll, 10);
+    // Ограничение частоты вызова при прокрутке
+    let lastScrollTime = 0;
+    $(window).on('scroll', function () {
+      const currentTime = new Date().getTime();
+      if (currentTime - lastScrollTime > 100) {
+        handleScroll();
+        lastScrollTime = currentTime;
+      }
     });
 
-    resizeMedia(); // Изменение размера изображений и видео при загрузке
-    $(window).resize(resizeMedia); // Изменение размера при изменении окна
+    resizeMedia();
+    $(window).resize(resizeMedia);
 
-    // Работа с модальными окнами
-    $('.openModal').click(function () {
+    // Функциональность модальных окон
+    $('.openModal').on('click', function () {
       const modalId = $(this).data('modal');
-      const modal = $('#' + modalId);
-      modal.addClass('show');
-      modal.find('.modal-content').addClass('show');
-      $('body').addClass('no-scroll'); // Добавляем класс no-scroll к body
+      const $modal = $('#' + modalId);
+      $modal.addClass('show').find('.modal-content').addClass('show');
+      $body.addClass('no-scroll');
     });
 
-    $('.close').click(function () {
-      const modal = $(this).closest('.modal');
-      modal.find('.modal-content').removeClass('show');
-      modal.removeClass('show');
-      $('body').removeClass('no-scroll'); // Убираем класс no-scroll у body
+    // Закрытие модального окна по клику
+    $modalCloseButtons.on('click', function () {
+      const $modal = $(this).closest('.modal');
+      $modal.removeClass('show').find('.modal-content').removeClass('show');
+      $body.removeClass('no-scroll');
     });
 
-    // Закрытие при клике вне модального окна
-    $(window).click(function (event) {
+    // Закрытие модального окна при клике вне его
+    $(window).on('click', function (event) {
       $('.modal').each(function () {
         if ($(event.target).is(this)) {
-          $(this).find('.modal-content').removeClass('show');
-          $(this).removeClass('show');
-          $('body').removeClass('no-scroll'); // Убираем класс no-scroll у body при клике вне
+          $(this).removeClass('show').find('.modal-content').removeClass('show');
+          $body.removeClass('no-scroll');
         }
       });
     });
 
-    // Функция для обработки видимости
+    // Функция для проверки видимости
     function checkVisibility() {
       $('.eimage-link').each(function () {
-        var elementTop = $(this).offset().top; // Получить верхнюю позицию элемента
-        var windowBottom = $(window).scrollTop() + $(window).height(); // Нижняя позиция окна
-        // Проверить, находится ли элемент в области видимости
-        if (elementTop < windowBottom && elementTop + $(this).outerHeight() > $(window).scrollTop()) {
-          $(this).addClass('visible').removeClass('hidden'); // Элемент видимый
+        const $this = $(this);
+        const elementTop = $this.offset().top;
+        const windowBottom = $(window).scrollTop() + $(window).height();
+
+        if (elementTop < windowBottom && elementTop + $this.outerHeight() > $(window).scrollTop()) {
+          $this.addClass('visible').removeClass('hidden');
         } else {
-          $(this).removeClass('visible').addClass('hidden'); // Элемент скрыт
+          $this.removeClass('visible').addClass('hidden');
         }
       });
     }
-    // Начальная проверка
+
+    // Начальная проверка видимости и проверка при прокрутке/изменении размера
     checkVisibility();
-    // Проверка при прокрутке
-    $(window).on('scroll resize', function () {
-      checkVisibility();
-    });
+    $(window).on('scroll resize', checkVisibility);
 
   });
 })(jQuery);
