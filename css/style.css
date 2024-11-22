@@ -273,11 +273,13 @@ a {
 .eimage-link.visible {
   opacity: 1; /* Полностью видимо */
   transform: translateY(0); /* Исходное положение */
+  transition: opacity 1.5s ease-in-out, transform 2.5s e ease-in-out; /* Плавный переход */
 }
 
 .eimage-link.hidden {
   opacity: 0; /* Полностью скрыты */
   transform: translateY(30px); /* Снова немного смещаются вниз */
+  transition: opacity 1.5s ease-in-out, transform 2.5s e ease-in-out; /* Плавный переход */
 }
 
 
