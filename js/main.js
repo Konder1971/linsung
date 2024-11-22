@@ -31,17 +31,17 @@
     $langToggle.click(toggleLanguageClass);
 
     // Функция для добавления класса активного элемента в навигации
-    function setActiveMenuItem() {
-      const currentPath = window.location.pathname; // Получаем текущий путь
-      $('nav .nav-item').each(function () {
-        const linkPath = $(this).attr('href'); // Получаем href элемента
-        if (currentPath.includes(linkPath)) { // Проверяем, совпадает ли путь
-          $(this).addClass('active'); // Добавляем класс active
-        }
-      });
-    }
+    //function setActiveMenuItem() {
+    //  const currentPath = window.location.pathname; // Получаем текущий путь
+    //  $('nav .nav-item').each(function () {
+    //    const linkPath = $(this).attr('href'); // Получаем href элемента
+    //    if (currentPath.includes(linkPath)) { // Проверяем, совпадает ли путь
+    //      $(this).addClass('active'); // Добавляем класс active
+    //    }
+    //  });
+    //}
 
-    setActiveMenuItem(); // Вызов функции при загрузке страницы
+    // setActiveMenuItem(); // Вызов функции при загрузке страницы
 
     // Функция для изменения высоты изображений и видео
     function resizeMedia() {
