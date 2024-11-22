@@ -267,7 +267,7 @@ a {
 .eimage-link {
   opacity: 0; /* Изначально скрыты */
   transform: translateY(30px); /* Начинают немного смещенными вниз */
-  transition: opacity 1.5s ease-in-out, transform 2s e ease-in-out; /* Плавный переход */
+  transition: opacity 1.5s ease-in-out, transform 2.5s e ease-in-out; /* Плавный переход */
 }
 
 .eimage-link.visible {
