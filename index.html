@@ -15,7 +15,11 @@
 
 	<link rel="stylesheet" href="css/lightbox.min.css">
   <!--<link rel="stylesheet" type="text/css" href="css/animate.min.css" rel="stylesheet">-->
-  <link rel="stylesheet" type="text/css" href="css/animate.min-411.css" rel="stylesheet">
+  <!--<link rel="stylesheet" type="text/css" href="css/animate.min-411.css" rel="stylesheet">-->
+
+  <!--https://michalsnik.github.io/aos/-->
+  <link href="css/aos.css" rel="stylesheet">
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
@@ -25,14 +29,16 @@
 	<header class="top">
 		<div class="top-container">
 			<div class="top-content">
+        <div data-aos="zoom-in">
 				<!-- logo start -->
 				<div class="logo ukr">
-					<h1 class="animate__ animate__zoomIn animated" style="animation-duration: 1.8s;">Тетяна Брикова</h1> <div class="lang">ukr/eng</div>
+					<h1>Тетяна Брикова</h1> <div class="lang">ukr/eng</div>
 				</div>
         <div class="logo eng">
-					<h1 class="animate__ animate__zoomIn animated" style="animation-duration: 1.8s;">Brykova Tetiana</h1> <div class="lang">ukr/eng</div>
+					<h1>Brykova Tetiana</h1> <div class="lang">ukr/eng</div>
 				</div>
 				<!-- logo stop -->
+      </div>
         <a class="nav-toggle"><span></span></a>
 			</div>
 		</div>
@@ -85,7 +91,7 @@
   <!-- navigations stop -->
 
 	<!-- Portfolio start -->
-	<div class="vaContainer animate__animated animate__fadeInUp" style="visibility: visible; animation-duration: 1s;">
+	<div class="vaContainer"data-aos="fade-up">
 		<div class="vaContent">
 
       <div class="vaMain portfolio">
@@ -276,5 +282,11 @@
 		new WOW().init();
 	</script>-->
 
+  <script src="js/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1300,
+    });
+  </script>
 </body>
 </html>
