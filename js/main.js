@@ -1,6 +1,6 @@
 (function ($) {
   $(document).ready(function () {
-    
+
     const $body = $('body');
     const $navigations = $('.navigations');
     const $langToggle = $('.lang');
@@ -107,6 +107,27 @@
           $('body').removeClass('no-scroll'); // Убираем класс no-scroll у body при клике вне
         }
       });
+    });
+
+    // Функция для обработки видимости
+    function checkVisibility() {
+      $('.eimage-link').each(function () {
+        var elementTop = $(this).offset().top; // Получить верхнюю позицию элемента
+        var windowBottom = $(window).scrollTop() + $(window).height(); // Нижняя позиция окна
+
+        // Проверить, находится ли элемент в области видимости
+        if (elementTop < windowBottom && elementTop + $(this).outerHeight() > $(window).scrollTop()) {
+          $(this).addClass('visible').removeClass('hidden'); // Элемент видимый
+        } else {
+          $(this).removeClass('visible').addClass('hidden'); // Элемент скрыт
+        }
+      });
+    }
+    // Начальная проверка
+    checkVisibility();
+    // Проверка при прокрутке
+    $(window).on('scroll resize', function () {
+      checkVisibility();
     });
 
   });

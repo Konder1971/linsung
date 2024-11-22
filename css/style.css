@@ -262,6 +262,25 @@ a {
   /*color: #26bbff;*/
   background-image: linear-gradient(#ED0000, #F68B27);
 }
+
+/* Добавьте это в ваш CSS (style.css) */
+.eimage-link {
+  opacity: 0; /* Изначально скрыты */
+  transform: translateY(30px); /* Начинают немного смещенными вниз */
+  transition: opacity 1.5s ease-in-out, transform 2s e ease-in-out; /* Плавный переход */
+}
+
+.eimage-link.visible {
+  opacity: 1; /* Полностью видимо */
+  transform: translateY(0); /* Исходное положение */
+}
+
+.eimage-link.hidden {
+  opacity: 0; /* Полностью скрыты */
+  transform: translateY(30px); /* Снова немного смещаются вниз */
+}
+
+
 .eimage-link {
   background-repeat: no-repeat;
   background-position: center center;	
