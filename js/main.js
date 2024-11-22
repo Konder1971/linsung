@@ -114,7 +114,6 @@
       $('.eimage-link').each(function () {
         var elementTop = $(this).offset().top; // Получить верхнюю позицию элемента
         var windowBottom = $(window).scrollTop() + $(window).height(); // Нижняя позиция окна
-
         // Проверить, находится ли элемент в области видимости
         if (elementTop < windowBottom && elementTop + $(this).outerHeight() > $(window).scrollTop()) {
           $(this).addClass('visible').removeClass('hidden'); // Элемент видимый
