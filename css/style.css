@@ -460,6 +460,16 @@ img.l2 {
 	.nav-toggle {
 		display: none;
 	}
+  .logo {
+    height: 71px;
+    overflow: hidden;
+    position: relative;
+  }
+  .logo h1 {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
   .logo h1,
   .logo h1 a {
 		/*font-size: 45px;*/
@@ -467,9 +477,6 @@ img.l2 {
     padding: 0px 0 0px;
     font-weight: 800;
 	}
-  .logo .lang {
-    display: none;
-  }
   .top p {   
     font-size: 20px;
     margin-top: 12px;
