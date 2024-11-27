@@ -581,6 +581,7 @@ img.l2 {
     left: 9px;
     font-weight: 400;
     top: -1px;
+    color: #cecece;
   }
   .top p {   
     font-size: 16px;
@@ -627,7 +628,7 @@ nav li {
 .navigations {
   background-color: #000;
 }
-nav .lang {
+.top .lang.forDesktop {
   border: 1px solid #fff;
   border-radius: 4px;
   cursor: pointer;
@@ -635,6 +636,10 @@ nav .lang {
   background-color: #333;
   font-size: 12px;
   text-transform: uppercase;
+  position: absolute;
+  z-index: 2;
+  top: 19px;
+  right: 20px;
 }
 nav .lang:hover {
   background-color: #000;
@@ -665,20 +670,13 @@ nav .lang:hover {
     border-bottom: 2px solid #666;
   }
 
-  nav {
-    position: relative;
-    height: 62px;
-  }
+
 	nav > ul {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: center;
 		align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
 	}
 	nav ul > li {
 		position: relative;
@@ -697,11 +695,13 @@ nav .lang:hover {
     padding-right: 0;
   }
 	nav ul > li a {
-		padding: 18px 0px;
   	font-size: 18px;
     display: block;
     text-align: center;
     background-color: #333;
+    position: relative;
+    /*padding: 18px 0px;*/
+    height: 54px;
 	}
   nav ul > li a:hover,
   nav ul > li a.active {
@@ -711,16 +711,20 @@ nav .lang:hover {
   nav ul > li a.active {
     cursor: default;
   }
-  
-  nav ul > li:last-child {
-    position: absolute;
-    top: -215px;
-    right: 30px;
-    display: inline-block;
-    width: auto;
-    padding: 0;
-  }
 
+  .nav-item span {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    width: 100%;
+		/*padding: 18px 0px;*/
+    height: 54px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -801,14 +805,11 @@ nav .lang:hover {
     margin-bottom: 20px;
 	}
   
-	nav .lang {
-    margin-top: 30px;;
+	nav .lang.forMobile {
+    margin-top: 25px;
     display: table;
     width: auto;
 	}
-  nav .lang:focus {
-    background-color: #000;
-  }
 
 }
 /* navigations stop
