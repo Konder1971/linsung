@@ -104,5 +104,10 @@
     checkVisibility();
     $(window).on('scroll resize', checkVisibility);
 
+    const currentYear = new Date().getFullYear(); // Получить текущий год
+    $('span').filter(function() {
+        return $(this).text().includes('©'); // Выбрать правильный <span>, который содержит '©'
+    }).text(`© ${currentYear}`); // Обновить текст с текущим годом
+
   });
 })(jQuery);
