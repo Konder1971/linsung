@@ -251,7 +251,6 @@ a {
 }
 .logo h1,
 .logo h1 a {
-  /*color: #fff;*/
   color: transparent;
   background-image: linear-gradient(#F68B27,#ED0000);
   -webkit-background-clip: text;
@@ -260,11 +259,9 @@ a {
 }
 .logo h1 a:hover,
 .logo h1 a:focus {
-  /*color: #26bbff;*/
   background-image: linear-gradient(#ED0000, #F68B27);
 }
 
-/* Добавьте это в ваш CSS (style.css) */
 .eimage-link {
   opacity: 0; /* Изначально скрыты */
   transform: translateY(50px); /* Начинают немного смещенными вниз */
@@ -474,7 +471,6 @@ img.l2 {
   }
   .logo h1,
   .logo h1 a {
-		/*font-size: 45px;*/
     font-size: 59px;
     padding: 0px 0 0px;
     font-weight: 800;
@@ -491,7 +487,6 @@ img.l2 {
 	}
 	.portfolio {
     display: grid;
-    /*grid-gap: 1px;*/
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
     margin-top: 20px;
@@ -701,7 +696,6 @@ nav .lang:hover {
     text-align: center;
     background-color: #333;
     position: relative;
-    /*padding: 18px 0px;*/
     height: 54px;
 	}
   nav ul > li a:hover,
@@ -723,7 +717,6 @@ nav .lang:hover {
     width: 100%;
     position: absolute;
     width: 100%;
-		/*padding: 18px 0px;*/
     height: 54px;
   }
 }
@@ -815,6 +808,7 @@ nav .lang:hover {
 }
 /* navigations stop
 --------------------------------------------------- */
+
 .no-scroll {
   overflow: hidden;
 }
