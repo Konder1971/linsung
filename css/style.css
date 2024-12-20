@@ -275,17 +275,17 @@ a {
 }
 
 .eimage-link {
-  opacity: 0; /* Изначально скрыты */
-  transform: translateY(50px); /* Начинают немного смещенными вниз */
-  transition: opacity 1.5s ease-in-out, transform 2.5s ease-in-out; /* Плавный переход */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.5s ease-in-out, transform 2.5s ease-in-out;
 }
 .eimage-link.visible {
-  opacity: 1; /* Полностью видимо */
-  transform: translateY(0); /* Исходное положение */
+  opacity: 1;
+  transform: translateY(0);
 }
 .eimage-link.hidden {
-  opacity: 0; /* Полностью скрыты */
-  transform: translateY(50px); /* Снова немного смещаются вниз */
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 
@@ -319,83 +319,9 @@ a {
   width: 100%;
   min-width: 100%;
 	display: block;
-  
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-transition: opacity 9s ease-in-out;
-  -moz-transition: opacity 9s ease-in-out;
-  -o-transition: opacity 9s ease-in-out;
-  transition: opacity 9s ease-in-out;
-}
-@-webkit-keyframes cf3FadeInOut {
-  0% {
-    opacity:0;
-  }
-  50% {
-    opacity:1;
-  }
-  100% {
-  opacity:0;
-  }
-}
-@-moz-keyframes cf3FadeInOut {
-  0% {
-    opacity:0;
-  }
-  50% {
-    opacity:1;
-  }
-  100% {
-  opacity:0;
-  }
-}
-@-o-keyframes cf3FadeInOut {
-  0% {
-    opacity:0;
-  }
-  50% {
-    opacity:1;
-  }
-  100% {
-  opacity:0;
-  }
-}
-@keyframes cf3FadeInOut {
-  0% {
-    opacity:0;
-  }
-  50% {
-    opacity:1;
-  }
-  100% {
-  opacity:0;
-  }
-}
-img.l2 {
-  -webkit-animation-name: cf3FadeInOut;
-  -webkit-animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 4s;
-  -webkit-animation-direction: alternate;
-
-  -moz-animation-name: cf3FadeInOut;
-  -moz-animation-timing-function: ease-in-out;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-duration: 4s;
-  -moz-animation-direction: alternate;
-
-  -o-animation-name: cf3FadeInOut;
-  -o-animation-timing-function: ease-in-out;
-  -o-animation-iteration-count: infinite;
-  -o-animation-duration: 4s;
-  -o-animation-direction: alternate;
-
-  animation-name: cf3FadeInOut;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 4s;
-  animation-direction: alternate;
 }
 
 .portfolio-video {
@@ -406,6 +332,15 @@ img.l2 {
   display: block;
   overflow: hidden!important;
 	cursor: pointer;
+}
+
+.l2 {
+  opacity: 0;
+  z-index: 2;
+  transition: opacity .5s ease-in-out;
+}
+.l2-img {
+  opacity: 1;
 }
 
 .top-content {

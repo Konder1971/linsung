@@ -85,7 +85,7 @@
       });
     });
 
-    // Функция для проверки видимости
+    // проверка видимости и проверка при прокрутке/изменении размера
     function checkVisibility() {
       $('.eimage-link').each(function () {
         const $this = $(this);
@@ -99,15 +99,21 @@
         }
       });
     }
-
-    // проверка видимости и проверка при прокрутке/изменении размера
     checkVisibility();
     $(window).on('scroll resize', checkVisibility);
 
-    const currentYear = new Date().getFullYear(); // Получить текущий год
+    // Получить текущий год
+    const currentYear = new Date().getFullYear();
     $('span').filter(function() {
-        return $(this).text().includes('©'); // Выбрать правильный <span>, который содержит '©'
-    }).text(`© ${currentYear}`); // Обновить текст с текущим годом
+        return $(this).text().includes('©');
+    }).text(`© ${currentYear}`);
+
+    // смена картинки
+    setInterval(function() {
+      $('.l2').each(function() {
+        $(this).toggleClass('l2-img');
+      });
+    }, 3000);
 
   });
 })(jQuery);
