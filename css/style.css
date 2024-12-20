@@ -654,6 +654,7 @@ nav .lang:hover {
     /*background-color: #666;*/
     /*color: #fff;*/
     color: #cbcbcb;
+    color: #999;
   }
   nav ul > li a.active {
     cursor: default;
