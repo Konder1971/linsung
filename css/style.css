@@ -274,18 +274,20 @@ a {
   background-image: linear-gradient(#ED0000, #F68B27);
 }
 
-.eimage-link {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1.5s ease-in-out, transform 2.5s ease-in-out;
-}
-.eimage-link.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.eimage-link.hidden {
-  opacity: 0;
-  transform: translateY(50px);
+@media (max-width: 767.98px) {
+  .eimage-link {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-in-out, transform 2.5s ease-in-out;
+  }
+  .eimage-link.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .eimage-link.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+  }
 }
 
 
@@ -322,10 +324,6 @@ a {
   position: absolute;
   left: 0;
   top: 0;
-  /*-webkit-transition: opacity 9s ease-in-out;
-  -moz-transition: opacity 9s ease-in-out;
-  -o-transition: opacity 9s ease-in-out;
-  transition: opacity 9s ease-in-out;*/
 }
 
 .portfolio-video {
