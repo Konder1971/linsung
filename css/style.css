@@ -376,25 +376,25 @@ img.l2 {
   -webkit-animation-name: cf3FadeInOut;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 9s;
+  -webkit-animation-duration: 14s;
   -webkit-animation-direction: alternate;
 
   -moz-animation-name: cf3FadeInOut;
   -moz-animation-timing-function: ease-in-out;
   -moz-animation-iteration-count: infinite;
-  -moz-animation-duration: 9s;
+  -moz-animation-duration: 14s;
   -moz-animation-direction: alternate;
 
   -o-animation-name: cf3FadeInOut;
   -o-animation-timing-function: ease-in-out;
   -o-animation-iteration-count: infinite;
-  -o-animation-duration: 9s;
+  -o-animation-duration: 14s;
   -o-animation-direction: alternate;
 
   animation-name: cf3FadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 9s;
+  animation-duration: 14s;
   animation-direction: alternate;
 }
 
@@ -886,6 +886,9 @@ nav .lang:hover {
   }
 }
 @media (max-width: 767.98px) {
+  .portfolio-video {
+    cursor: default;
+  }
   .modal {
     display: none!important;
   }
