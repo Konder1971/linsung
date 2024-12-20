@@ -216,7 +216,7 @@ a {
 	opacity: .8;
 }
 .vaMain {
-  margin: 8px auto 35px;
+  margin: 35px auto 35px;
   text-align: center;
 }
 .vaMain .hr-1 {
@@ -274,6 +274,11 @@ a {
   background-image: linear-gradient(#ED0000, #F68B27);
 }
 
+@media (min-width: 768px) {
+  .vaMain {
+    margin: 8px auto 35px;
+  }
+}
 @media (max-width: 767.98px) {
   .eimage-link {
     opacity: 0;
