@@ -376,25 +376,25 @@ img.l2 {
   -webkit-animation-name: cf3FadeInOut;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 14s;
+  -webkit-animation-duration: 4s;
   -webkit-animation-direction: alternate;
 
   -moz-animation-name: cf3FadeInOut;
   -moz-animation-timing-function: ease-in-out;
   -moz-animation-iteration-count: infinite;
-  -moz-animation-duration: 14s;
+  -moz-animation-duration: 4s;
   -moz-animation-direction: alternate;
 
   -o-animation-name: cf3FadeInOut;
   -o-animation-timing-function: ease-in-out;
   -o-animation-iteration-count: infinite;
-  -o-animation-duration: 14s;
+  -o-animation-duration: 4s;
   -o-animation-direction: alternate;
 
   animation-name: cf3FadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 14s;
+  animation-duration: 4s;
   animation-direction: alternate;
 }
 
