@@ -252,10 +252,7 @@ a {
   line-height: 35px;
 }
 .contacts p span {
-  color: #96969a;
-  background-image: linear-gradient(135deg, red, green);
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: #cbcbcb;
 }
 .logo {
 	color: #fff;
