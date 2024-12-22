@@ -945,5 +945,6 @@ footer a span {
   display: block;
 }
 .d3-pic img {
+  width: 100%;
   max-width: 800px;
 }
