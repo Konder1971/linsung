@@ -944,3 +944,6 @@ footer a span {
 .p3d {
   display: block;
 }
+.d3-pic img {
+  max-width: 800px;
+}
