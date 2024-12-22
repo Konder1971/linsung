@@ -59,25 +59,22 @@
       $body.addClass('no-scroll');
     }
     function handleResize() {
-        if ($(window).width() > 767) {
-            $('.openModal').off('click').on('click', handleModalClick);
-        } else {
-            $('.openModal').off('click').on('click', function (event) {
-                event.preventDefault();
-            });
-        }
+      if ($(window).width() > 767) {
+          $('.openModal').off('click').on('click', handleModalClick);
+      } else {
+          $('.openModal').off('click').on('click', function (event) {
+              event.preventDefault();
+          });
+      }
     }
     handleResize();
     $(window).resize(handleResize);
-
-
     // Закрытие модального окна по клику
     $modalCloseButtons.on('click', function () {
       const $modal = $(this).closest('.modal');
       $modal.removeClass('show').find('.modal-content').removeClass('show');
       $body.removeClass('no-scroll');
     });
-
     // Закрытие модального окна при клике вне его
     $(window).on('click', function (event) {
       $('.modal').each(function () {
