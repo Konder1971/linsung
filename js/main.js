@@ -5,7 +5,6 @@
     const $langToggle = $('.lang');
     const $modalCloseButtons = $('.close');
     const navToggle = $('.nav-toggle');
-    //const scrollThreshold = 220;
 
     // Фиксированная навигация при прокрутке
     function handleScroll() {
@@ -52,12 +51,25 @@
     $(window).resize(resizeMedia);
 
     // Функциональность модальных окон
-    $('.openModal').on('click', function () {
-      const modalId = $(this).data('modal');
+    function handleModalClick(event) {
+      event.preventDefault();
+      const modalId = $(event.target).data('modal');
       const $modal = $('#' + modalId);
       $modal.addClass('show').find('.modal-content').addClass('show');
       $body.addClass('no-scroll');
-    });
+    }
+    function handleResize() {
+        if ($(window).width() > 767) {
+            $('.openModal').off('click').on('click', handleModalClick);
+        } else {
+            $('.openModal').off('click').on('click', function (event) {
+                event.preventDefault();
+            });
+        }
+    }
+    handleResize();
+    $(window).resize(handleResize);
+
 
     // Закрытие модального окна по клику
     $modalCloseButtons.on('click', function () {
@@ -113,20 +125,3 @@
 
   });
 })(jQuery);
-
-//document.addEventListener('DOMContentLoaded', () => {
-//  let toTopBtn = document.querySelector('.to-up');
-//  window.onscroll = function () {
-//    if (window.pageYOffset > 400) {
-//      toTopBtn.style.display = 'block'
-//    } else {
-//      toTopBtn.style.display = 'none'
-//    }
-//  }
-//  toTopBtn.addEventListener('click', function () {
-//    window.scrollBy({
-//      top: -document.documentElement.scrollHeight,
-//      behavior: 'smooth'
-//    });
-//  });
-//});
