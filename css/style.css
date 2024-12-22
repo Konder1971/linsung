@@ -197,24 +197,6 @@ body {
 a {
   text-decoration: none;
 }
-.to-up {
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	z-index: 98;
-	width: 40px;
-	height: 40px;
-	text-align: center;
-	line-height: 40px;
-	background-color: #00B465;
-	color: #fff;
-	cursor: pointer;
-	border-radius: 4px;
-	display: none;
-}
-.to-up:hover {
-	opacity: .8;
-}
 .vaMain {
   margin: 35px auto 35px;
   text-align: center;
