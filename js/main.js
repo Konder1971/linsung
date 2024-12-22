@@ -63,7 +63,7 @@
           $('.openModal').off('click').on('click', handleModalClick);
       } else {
           $('.openModal').off('click').on('click', function (event) {
-              event.preventDefault();
+            event.preventDefault();
           });
       }
     }
