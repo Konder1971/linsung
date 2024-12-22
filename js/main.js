@@ -5,8 +5,15 @@
     const $langToggle = $('.lang');
     const $modalCloseButtons = $('.close');
     const navToggle = $('.nav-toggle');
-    const scrollThreshold = 220;
+    //const scrollThreshold = 220;
 
+    // Фиксированная навигация при прокрутке
+    function handleScroll() {
+      $('.navigations').toggleClass('navigations_fixed', $(window).scrollTop() > 239);
+    }
+    $(window).on('scroll', handleScroll);
+    $(window).trigger('scroll');
+    
     // Установить сохранённый язык из localStorage или использовать по умолчанию
     const savedLangClass = localStorage.getItem('langClass') || 'lang-ukr';
     $body.removeClass('lang-ukr lang-eng').addClass(savedLangClass);
@@ -41,22 +48,6 @@
       $navigations.removeClass('active');
     });
 
-    // Фиксированная навигация при прокрутке
-    function handleScroll() {
-      const scrollTop = $(this).scrollTop();
-      $('.navigations').toggleClass('navigations_fixed', scrollTop > scrollThreshold);
-    }
-
-    // Ограничение частоты вызова при прокрутке
-    let lastScrollTime = 0;
-    $(window).on('scroll', function () {
-      const currentTime = new Date().getTime();
-      if (currentTime - lastScrollTime > 100) {
-        handleScroll();
-        lastScrollTime = currentTime;
-      }
-    });
-
     resizeMedia();
     $(window).resize(resizeMedia);
 
@@ -87,7 +78,7 @@
 
     // проверка видимости и проверка при прокрутке/изменении размера
     function checkVisibility() {
-      $('.eimage-link').each(function () {
+      $('.eimage-link, .d3-pic').each(function () {
         const $this = $(this);
         const elementTop = $this.offset().top;
         const windowBottom = $(window).scrollTop() + $(window).height();
@@ -118,7 +109,7 @@
     AOS.init({
       duration: 1000,
       once: true,
-    });
+    }); 
 
   });
 })(jQuery);

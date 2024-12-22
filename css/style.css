@@ -605,6 +605,7 @@ nav .lang:hover {
 		-webkit-transition: 300ms ease-out;
 		-moz-transition: 300ms ease-out;
 		transition: 300ms ease-out;
+    height: 62px;
 	}
 
   .navigations_fixed {
@@ -620,7 +621,6 @@ nav .lang:hover {
     /*border-top: 2px solid #666;
     border-bottom: 2px solid #666;*/
   }
-
 
 	nav > ul {
 		display: flex;
