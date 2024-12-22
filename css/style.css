@@ -437,6 +437,7 @@ a {
   .portfolio-video {
     border: 2px solid #000;
     overflow: hidden;
+    min-height: 168px;
   }
    
   .eimage-link:hover,
