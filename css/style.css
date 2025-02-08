@@ -361,17 +361,6 @@ a {
     margin: 20px auto 20px;
     padding: 0 40px;
   }
-  .top-content {
-    background-color: #333;
-    border-radius: 10px;
-    padding: 20px 20px 30px;
-    text-align: center;
-    height: 220px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
 
   .top-social {
     position: absolute;
@@ -401,10 +390,9 @@ a {
     position: relative;
   }
   .logo h1 {
-    position: absolute;
     text-align: center;
-    width: 100%;
-    height: 71px;
+    position: relative;
+    top: -13px;
   }
   .logo h1,
   .logo h1 a {
@@ -456,21 +444,13 @@ a {
 }
 
 @media (max-width: 767.98px) {
-  body {
-    padding-top: 32px;
-  }
-  .top {
-    position: fixed;
-    z-index: 99;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 62px;
-    background-color: #000;
-  }
 	.top-content {
 		padding: 0 20px;
 	}
+
+  .top-content img {
+    margin-top: 17px;
+  }
 
   .top-social {
     margin-top: 35px;
