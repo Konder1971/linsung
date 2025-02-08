@@ -358,7 +358,7 @@ a {
 @media (min-width: 768px) {
   .top-container {
     max-width: 1360px;
-    margin: 20px auto 20px;
+    margin: 20px auto 0;
     padding: 0 40px;
   }
   .top-container img {
@@ -571,7 +571,7 @@ nav .lang:hover {
 		-webkit-transition: 300ms ease-out;
 		-moz-transition: 300ms ease-out;
 		transition: 300ms ease-out;
-    height: 62px;
+    height: 31px;
 	}
 
   .navigations_fixed {
