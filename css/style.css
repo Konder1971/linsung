@@ -571,7 +571,7 @@ nav .lang:hover {
 		-webkit-transition: 300ms ease-out;
 		-moz-transition: 300ms ease-out;
 		transition: 300ms ease-out;
-    height: 31px;
+    height: 36px;
 	}
 
   .navigations_fixed {
@@ -639,7 +639,7 @@ nav .lang:hover {
     width: 100%;
     position: absolute;
     width: 100%;
-    height: 54px;
+    height: 46px;
   }
 }
 
