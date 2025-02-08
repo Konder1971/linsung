@@ -365,7 +365,7 @@ a {
   .top-social {
     position: absolute;
     z-index: 2;
-    top: 15px;
+    top: 0px;
     left: 20px;
   }
   .top-social a {
@@ -385,7 +385,7 @@ a {
 		display: none;
 	}
   .logo {
-    height: 84px;
+    height: 45px;
     overflow: hidden;
     position: relative;
   }
@@ -552,7 +552,7 @@ nav li {
   text-transform: uppercase;
   position: absolute;
   z-index: 2;
-  top: 19px;
+  top: 0px;
   right: 20px;
 }
 nav .lang:hover {
