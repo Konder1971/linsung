@@ -558,7 +558,7 @@ nav li {
   top: 0px;
   right: 20px;
 }
-nav .lang:hover {
+.top .lang:hover {
   background-color: #000;
   color: #fff;
 }
