@@ -583,10 +583,6 @@ nav li {
 		-moz-transition: 300ms ease-out;
 		transition: 300ms ease-out;
 	}
-  .navigations .vaContent {
-    /*border-top: 2px solid #666;
-    border-bottom: 2px solid #666;*/
-  }
 
 	nav > ul {
 		display: flex;
